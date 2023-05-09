@@ -13,8 +13,8 @@ const empleados2 = [
     { name: "Ana", email: "Ana@gmail.com" },
     { name: "Andrea", email: "Andrea@gmail.com" },
 ];
-const [{ email }] = empleados2.filter(({ name }) => name === "Luis");
-console.log(email);
+const emailLuis  = empleados2.filter(({ name }) => name === "Luis")[0].email;
+console.log(emailLuis);
 
 // *3 
 let a = 5;
@@ -28,9 +28,9 @@ const HIGH_TEMPERATURES = {
     today: 35,
     tomorrow: 32,
   };
-  const {today, tomorrow} = HIGH_TEMPERATURES;
-  console.log(HIGH_TEMPERATURES)
-
+  const { today: maximaHoy, tomorrow: maximaManana } = HIGH_TEMPERATURES;
+  console.log(maximaHoy);
+  console.log(maximaManana);
 
 // *5
 function sumEveryOther(...num){
