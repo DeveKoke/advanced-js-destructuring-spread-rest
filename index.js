@@ -32,12 +32,14 @@ const HIGH_TEMPERATURES = {
   console.log(maximaHoy);
   console.log(maximaManana);
 
+
 // *5
 function sumEveryOther(...num){
     const sumatory = num.reduce((acc, cur)=> acc += cur,0);
     return sumatory;
 };
 console.log(sumEveryOther(2, 5, 6, 1, 8));
+
 
 // *6
 function addOnlyNums(...num){
@@ -69,17 +71,25 @@ function onlyUniques(...args) {
 }
 console.log(onlyUniques(1, 1, 2, 2, 3, 6, 7, 8))
 
+
 // *10
 function combineAllArrays(...arr2) {
     const mixAllArrays = arr2.flat();
     return mixAllArrays
 }
 console.log(combineAllArrays([2, 7, 3, 1], [2, 7, 4, 12], [2, 44, 22, 7, 3, 1]))
+const combineAllArrays = (...arr) => {
+    let combinedArr = [];
+    arr.forEach(ele => combinedArr = [...combinedArr, ...ele]);
+    return combinedArr
+  };
+
 
 
 // *11
 function sumAndSquare(...params) {
-    const power2 = params.map(x => x**2).reduce((acc, cur)=> acc +=cur, 0)
-    return power2;
+    return params.map(x => x**2).reduce((acc, cur)=> acc +=cur, 0)
+    
 }
 console.log(sumAndSquare(2, 4, 3))
+
